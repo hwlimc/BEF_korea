@@ -1,0 +1,2500 @@
+A0
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	A0[j]<-A#
+	points(ks,col=j)#
+	}
+A0
+A<-diag(-ks)
+A
+A0<-list(A)
+A0
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	A0[j]<-A#
+	points(ks,col=j)#
+	}
+A0
+A
+A0<-list(A)
+A0[1]
+A0[2]
+A0[1]
+A0<-list(A)
+A0[1]
+A0[1][1]
+A0[1][,1]
+A0[1,1]
+A0[[1]]
+A0[[1,]]
+A0<-as.list(A)
+A0
+A
+A0<-as.list(A)
+A0
+A0<-list(A)
+A0
+A0<-(A)
+A[[1]]
+A[1]
+?list
+pts <- list(x = cars[,1], y = cars[,2])#
+plot(pts)
+pts
+vector("list", 5)
+f <- function() x
+formals(f) <- al <- alist(x = , y = 2+3, ... = )
+al
+alistt
+alist
+f
+formals(mean)
+e1 <- new.env()#
+e1$a <- 10#
+e1$b <- 20#
+as.list(e1)
+e1
+as.list(e1)
+new.env()
+vector("list", 5)
+Ae<-vector("list", 11)
+Ae
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}
+Ae
+Ae[1]
+Ae[[1]]
+Ae[[1]][1]
+Ie<-vector("list", 11)
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+plot(Litter~year,Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#### Increased input 1#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=2))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}
+Ie
+matrixmodel<-Model(years,Ae[[1]],Ce[[1]],I0)
+Ct=getC(matrixmodel)
+Rt=getReleaseFlux(matrixmodel)
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])
+Ct=getC(matrixmodel)
+Rt=getReleaseFlux(matrixmodel)
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)")
+legend("topright",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")
+for(i in 2:11)#
+matrixmodel<-Model(years,Ae[[i]],Ce[[i]],I0)#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+par(mfrow=c(3,2))#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE)
+for(i in 2:11)#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+par(mfrow=c(3,2))#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE)
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE)
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)")#
+legend("topright",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11)#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE)
+for(i in 2:11)#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=FALSE)
+for(i in 5)#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=FALSE)
+for(i in 7)#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=FALSE)
+for(i in 1)#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=FALSE)
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)")#
+legend("topright",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11)#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=FALSE)
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)")#
+legend("topright",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11)#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE)
+Ie
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE)}
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)")#
+legend("topright",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE,lwd=1-0.1*i)}
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+plot(Litter~year,Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#### Increased input 1#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.1))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Decomposition 1#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## transfer coefficients#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)")#
+legend("topright",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE,lwd=1-0.1*i)}
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,ylim=c(0,200))#
+legend("topright",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE,lwd=1-0.1*i)}
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topright",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE,lwd=1-0.1*i)}
+par(mforw=c(3,2))#
+## Simulation#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+plot(Litter~year,Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#### Increased input 1#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.1))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Decomposition 1#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}
+par(mfrow=c(3,2))
+## Simulation#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+plot(Litter~year,Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#### Increased input 1#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.1))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Decomposition 1#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}
+plot(rnorm(n=10,mean=10,sd=0.1)~c(1:10),Litter,ylim=c(5,20),type='l')
+par(mfrow=c(3,2))#
+## Simulation#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+plot(rnorm(n=10,mean=10,sd=0.1)~c(1:10),Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#### Increased input 1#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.1))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}
+par(mfrow=c(3,2))#
+## Simulation#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+plot(rnorm(n=10,mean=10,sd=0.5)~c(1:10),Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#### Increased input 1#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.5))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}
+par(mfrow=c(3,2))#
+## Simulation#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+plot(rnorm(n=10,mean=10,sd=0.25)~c(1:10),Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#### Increased input 1#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}
+### Decomposition 1#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}
+## transfer coefficients#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topright",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,max(Ct)),add=TRUE,lwd=1-0.1*i)}
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,add=TRUE,lwd=1-0.15*i)}
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,add=TRUE,lwd=2-0.25*i)}
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,add=TRUE,lwd=2-0.25*i)}
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+## Fixed decomposition#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", lty=1, col=1:3,add=TRUE,lwd=2-0.25*i)}
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+## Fixed decomposition, varible input#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,max(Rt)),
+ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,max(Rt)),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,15),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,15),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+par(mfrow=c(3,2))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=10,mean=10,sd=0.25)~c(1:10),Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,15),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,15),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,15),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+par(mfrow=c(4,2))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=10,mean=10,sd=0.25)~c(1:10),Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=10,mean=10,sd=0.25)~c(1:10),Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1)#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Fixed O, Variable I')
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200),
+ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Fixed O, Variable I')
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=10,mean=10,sd=0.25)~c(1:10),Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Fixed I, Variable O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I and O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Fixed I, Variable O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I and O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=10,mean=10,sd=0.25)~c(1:10),Litter,ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:10){#
+	I<-data.frame(year=c(1:10),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:10){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Fixed I, Variable O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I and O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:11){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+plot(rnorm(n=10,mean=10,sd=0.25)~c(1:10),ylim=c(5,20),type='l')
+plot(rnorm(n=10,mean=10,sd=0.25)~c(1:25),ylim=c(5,20),type='l')
+plot(rnorm(n=25,mean=10,sd=0.25)~c(1:25),ylim=c(5,20),type='l')
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=25,mean=10,sd=0.25)~c(1:25),ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:25){#
+	I<-data.frame(year=c(1:25),Litter=rnorm(n=10,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=25,mean=10,sd=0.25)~c(1:25),ylim=c(5,20),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:25){#
+	I<-data.frame(year=c(1:25),Litter=rnorm(n=25,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=25,mean=10,sd=0.25)~c(1:25),ylim=c(5,40),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:25){#
+	I<-data.frame(year=c(1:25),Litter=rnorm(n=25,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=25,mean=10,sd=0.25)~c(1:25),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:25){#
+	I<-data.frame(year=c(1:25),Litter=rnorm(n=25,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:25){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:25){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=25,mean=10,sd=0.25)~c(1:25),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:25){#
+	I<-data.frame(year=c(1:25),Litter=rnorm(n=25,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:25){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:25){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:25){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Fixed I, Variable O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:25){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:25){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I and O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:25){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:25){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Fixed I, Variable O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,200), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I and O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)}
+years
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,ylim=c(0,200),
+ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')
+m.yr<-40#
+years=seq(from=1,to=m.yr,by=1/365)#
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,500), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,ylim=c(0,500),lwd=2,main='Variable I, Fixed O')#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=1,add=TRUE,lwd=3-0.25*i)#
+}
+years=seq(from=1,to=m.yr,by=1)
+years
+m.yr<-40#
+years=seq(from=1,to=m.yr,by=1)#
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,500), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,ylim=c(0,500),lwd=2,main='Variable I, Fixed O')#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=1,add=TRUE,lwd=3-0.25*i)#
+}
+m.yr<-40#
+years=seq(from=1,to=m.yr,by=1)#
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,1000), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,ylim=c(0,500),lwd=2,main='Variable I, Fixed O')#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=1,add=TRUE,lwd=3-0.25*i)#
+}
+m.yr<-40#
+years=seq(from=1,to=m.yr,by=1)#
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,10000), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,ylim=c(0,500),lwd=2,main='Variable I, Fixed O')#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=1,add=TRUE,lwd=3-0.25*i)#
+}
+m.yr<-20#
+years=seq(from=1,to=m.yr,by=1)#
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,10000), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,ylim=c(0,500),lwd=2,main='Variable I, Fixed O')#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=1,add=TRUE,lwd=3-0.25*i)#
+}
+m.yr<-20#
+years=seq(from=1,to=m.yr,by=1)#
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,100), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,lwd=2,main='Variable I, Fixed O')#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=1,add=TRUE,lwd=3-0.25*i)#
+}
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,100), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,lwd=2,main='Variable I, Fixed O')#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=1,add=TRUE,lwd=3-0.25*i)#
+}
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,100), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,lwd=2,add=TRUE)#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=1,add=TRUE,lwd=3-0.25*i)#
+}
+m.yr<-20#
+years=seq(from=1,to=m.yr,by=1)#
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,600), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=1:3,lwd=2,add=TRUE)#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=1,add=TRUE,lwd=3-0.25*i)#
+}
+m.yr<-20#
+years=seq(from=1,to=m.yr,by=1)#
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,600), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=4,add=TRUE,lwd=3-0.25*i)#
+}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+matplot(years,rowSums(Rt), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Rt), type="l", col=4,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,500), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Fixed I, Variable O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=4,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+matplot(years,rowSums(Rt), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Rt), type="l", col=4,add=TRUE,lwd=2-0.25*i)}#
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,500), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I and O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=4,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,20),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+matplot(years,rowSums(Rt), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Rt), type="l", col=4,add=TRUE,lwd=2-0.25*i)}
+m.yr<-45#
+years=seq(from=1,to=m.yr,by=1)#
+par(mfrow=c(2,4))#
+## Simulation#
+#
+C0=c(C01=10,C02=40,C03=30) #Initial conditions for each pool#
+#
+#### Increased input by 5% per year#
+plot(rnorm(n=m.yr,mean=10,sd=0.25)~c(1:m.yr),ylim=c(5,30),type='l')#
+Ie<-vector("list", 11)#
+#
+for (i in 0:m.yr){#
+	I<-data.frame(year=c(1:m.yr),Litter=rnorm(n=m.yr,mean=10*(1+0.05*i),sd=0.25))#
+	Ie[[(i+1)]]<-I#
+points(Litter~year,I,type='l',col=i)#
+}#
+#
+### Increased decomposition by 5% per year#
+Ae<-vector("list", 11)#
+ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+plot(ks,xlab='Pool',ylab='Decomposition rate',ylim=c(0,1),xlim=c(0.5,3.5))#
+for (j in 0:m.yr){#
+	ks=c(k1=1/2, k2=1/5, k3=1/8) #Decomposition rates for each pool#
+	ks<-ks*(1+0.05*j)#
+	A<-diag(-ks)#
+	A[2,1]<-ks[1]*0.3#
+	A[1,2]<-ks[2]*0.1#
+	A[3,2]<-ks[2]*0.2#
+	A[2,3]<-ks[3]*0.1#
+	A[3,1]<-ks[1]*0.5#
+	A[1,3]<-ks[3]*0.1#
+	Ae[[(j+1)]]<-A#
+	points(ks,col=j)#
+	}#
+## Fixed decomposition, varible input#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,600), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I, Fixed O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=4,add=TRUE,lwd=3-0.25*i)#
+}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,200),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+matplot(years,rowSums(Rt), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Rt), type="l", col=4,add=TRUE,lwd=2-0.25*i)}#
+## Fixed input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,600), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Fixed I, Variable O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=4,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,200),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+matplot(years,rowSums(Rt), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Rt), type="l", col=4,add=TRUE,lwd=2-0.25*i)}#
+## variable input, varible decomposition#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Ct=getC(matrixmodel)#
+Rt=getReleaseFlux(matrixmodel)#
+#
+matplot(years,Ct, type="l", lty=1, col=1:3,ylim=c(0,600), #
+        ylab="Carbon stocks (Mg C/ha)", xlab="Time (years)",lwd=1.1,main='Variable I and O')#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3, bty="n")#
+matplot(years,rowSums(Ct), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Ct=getC(matrixmodel)#
+matplot(years,Ct, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Ct), type="l", col=4,add=TRUE,lwd=2-0.25*i)}#
+matrixmodel<-Model(years,Ae[[1]],C0,Ie[[1]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt,col=1:3, type="l", lty=1,  ylim=c(0,200),#
+        ylab="Carbon release flux (Mg C/ha/yr)", xlab="Time(years)")#
+legend("topleft",c("Pool 1","Pool 2","Pool 3"),lty=1,col=1:3,bty="n")#
+matplot(years,rowSums(Rt), type="l", lty=1, col=4,lwd=2,add=TRUE)#
+#
+for(i in 2:m.yr){#
+matrixmodel<-Model(years,Ae[[i]],C0,Ie[[i]])#
+Rt=getReleaseFlux(matrixmodel)#
+matplot(years,Rt, type="l", col=1:3,add=TRUE,lwd=2-0.25*i)#
+matplot(years,rowSums(Rt), type="l", col=4,add=TRUE,lwd=2-0.25*i)}
+CO2flux=data.frame(#
+ time=c(1,2,5,8,13,18,23,28,33,38,48,62,78,93,107,121,135,149,163,177,191),#
+ cummCO2=c(0.140,0.246,0.474,0.690,0.926,1.125,1.316,1.458,1.606,1.755,1.873,#
+           1.967,2.111,2.199,2.284,2.372,2.460,2.545,2.585,2.622,2.653),#
+ Stderr=c(0.054,0.060,0.078,0.100,0.152,0.187,0.204,0.219,0.222,0.223,0.253,#
+          0.305,0.320,0.329,0.362,0.390,0.401,0.413,0.444,0.462,0.488)#
+)
+Ctotal=20.0 #C concentration in soil sample (mg C g-1 soil)
+CO2flux
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+     ylab="Cummulative respiration (mg C g-1 soil)",  ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+           CO2flux[,3],angle=90, length=0.1,code=3)
+library(FME)
+install.packages('FME')
+library('FME')
+pars
+days=seq(0,191) #Incubation days#
+#
+eCO2func=function(pars){#
+  mod=TwopFeedbackModel(#
+    t=days,#
+    ks=pars[1:2],#
+    a21=pars[3]*pars[1],#
+    a12=pars[4]*pars[2], #
+    C0=Ctotal*c(pars[5],1-pars[5]), #
+    In=0,#
+    pass=TRUE#
+  )#
+  AccR=getAccumulatedRelease(mod)#
+  return(data.frame(time=days,cummCO2=rowSums(AccR)))#
+}
+getAccumulatedRelease
+eCO2func=function(pars){#
+  mod=TwopFeedbackModel(#
+    t=days,#
+    ks=pars[1:2],#
+    a21=pars[3]*pars[1],#
+    a12=pars[4]*pars[2], #
+    C0=Ctotal*c(pars[5],1-pars[5]), #
+    In=0,#
+    pass=TRUE#
+  )#
+  AccR=getAccumulatedRelease(mod)#
+  return(data.frame(time=days,cummCO2=rowSums(AccR)))#
+}#
+#
+eCO2cost=function(pars){#
+  modelOutput=eCO2func(pars)#
+  return(modCost(model=modelOutput, obs=CO2flux, err="Stderr"))#
+}
+inipars=c(k1=0.5,k2=0.05,alpha21=0.5,alpha12=0.1,gamma=0.5)
+days=seq(0,191) #Incubation days#
+#
+eCO2func=function(pars){#
+  mod=TwopFeedbackModel(#
+    t=days,#
+    ks=pars[1:2],#
+    a21=pars[3]*pars[1],#
+    a12=pars[4]*pars[2], #
+    C0=Ctotal*c(pars[5],1-pars[5]), #
+    In=0,#
+    pass=TRUE#
+  )#
+  AccR=getAccumulatedRelease(mod)#
+  return(data.frame(time=days,cummCO2=rowSums(AccR)))#
+}#
+#
+eCO2cost=function(pars){#
+  modelOutput=eCO2func(pars)#
+  return(modCost(model=modelOutput, obs=CO2flux, err="Stderr"))#
+}#
+#
+inipars=c(k1=0.5,k2=0.05,alpha21=0.5,alpha12=0.1,gamma=0.5)#
+#
+eCO2fit=modFit(f=eCO2cost,p=inipars,method="Nelder-Mead",#
+               upper=c(Inf,Inf,1,1,1),lower=c(0,0,0,0,0))
+eCO2fit
+eCO2fit$par
+#Run the model again with best parameter set#
+fitmod=TwopFeedbackModel(t=days, ks=eCO2fit$par[1:2], #
+                         a21=eCO2fit$par[3]*eCO2fit$par[1],#
+                         a12=eCO2fit$par[4]*eCO2fit$par[2], #
+                         C0=Ctotal*c(eCO2fit$par[5],1-eCO2fit$par[5]), #
+                         In=0)#
+fitCum=getAccumulatedRelease(fitmod)#
+#
+#Plot the results#
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+      ylab="Cummulative respiration (mg C g-1 soil)", ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],angle=90, length=0.1,code=3)#
+lines(rowSums(fitCum))
+CO2flux
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+      ylab="Cummulative respiration (mg C g-1 soil)", ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],angle=90, length=0.1,code=1)#
+lines(rowSums(fitCum))
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],angle=90, length=0.1,code=2)
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+      ylab="Cummulative respiration (mg C g-1 soil)", ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],angle=90, length=0.1,code=2)#
+lines(rowSums(fitCum))
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+      ylab="Cummulative respiration (mg C g-1 soil)", ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],angle=90, length=0.1,code=0)
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+      ylab="Cummulative respiration (mg C g-1 soil)", ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],angle=90,length=1,code=0)
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],angle=90,length=3,code=0)
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+      ylab="Cummulative respiration (mg C g-1 soil)", ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],angle=90,length=0,code=0)
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+      ylab="Cummulative respiration (mg C g-1 soil)", ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],angle=90)
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+      ylab="Cummulative respiration (mg C g-1 soil)", ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3])
+#Plot the results#
+plot(CO2flux[,1:2],type="p",xlab="Days",#
+      ylab="Cummulative respiration (mg C g-1 soil)", ylim=c(0,4))#
+arrows(CO2flux[,1],CO2flux[,2]-CO2flux[,3],CO2flux[,1],CO2flux[,2]+#
+                   CO2flux[,3],cod=0)
+lines(rowSums(fitCum))
+eCO2fit
+?FME
+stock=1600#
+u1=100#
+#
+k=c(1/4, 1/25, 1/100)#
+A2=diag(-k)#
+u2=matrix(c(70, 20, 10), ncol=1)#
+#
+A3=diag(-k)#
+A3[2,1]=k[1]*(20/90)#
+A3[3,2]=k[2]*(5/(30+5+20))#
+A3[2,3]=k[3]#
+A3[1,2]=k[2]*(20/(30+5+20))#
+u3=matrix(c(70,30,0), ncol=1)
+SATT1=stock/u1
+SA2=systemAge(A=A2, u=u2)
+TT2=transitTime(A=A2, u=u2)
+SA3=systemAge(A=A3, u=u3)
+TT3=transitTime(A=A3, u=u3)
+SATT1
+SA2$meanSystemAge
+#Mean ages for the three models#
+SATT1#
+SA2$meanSystemAge#
+SA3$meanSystemAge#
+#Mean transit times#
+SATT1#
+TT2$meanTransitTime#
+TT3$meanTransitTime
+SA2$meanPoolAge
+SA3$meanPoolAge
+par(mfrow=c(2,1))#
+plot(seq(0,100),SA2$systemAgeDensity, type="l", col=4, xlab="Age", ylab="Density function")#
+abline(v=SA2$meanSystemAge, lty=2, col=4)#
+lines(seq(0,100),SA3$systemAgeDensity, col=2)#
+abline(v=SA3$meanSystemAge, col=2, lty=2)#
+#
+plot(seq(0,100), TT2$transitTimeDensity, type="l", col=4, xlab="Transit time", ylab="Density function")#
+abline(v=TT2$meanTransitTime, lty=2, col=4)#
+lines(seq(0,100), TT3$transitTimeDensity, col=2)#
+abline(v=TT3$meanTransitTime, lty=2, col=2)#
+legend("topright", c("Parallel structure", "Feedback structure"), lty=1, col=c(4,2), bty="n")
+par(mfrow=c(2,1))#
+plot(seq(0,100),SA2$systemAgeDensity, type="l", col=4, xlab="Age", ylab="Density function")#
+abline(v=SA2$meanSystemAge, lty=2, col=4)#
+lines(seq(0,100),SA3$systemAgeDensity, col=2)#
+abline(v=SA3$meanSystemAge, col=2, lty=2)
+plot(seq(0,100), TT2$transitTimeDensity, type="l", col=4, xlab="Transit time", ylab="Density function")#
+abline(v=TT2$meanTransitTime, lty=2, col=4)#
+lines(seq(0,100), TT3$transitTimeDensity, col=2)#
+abline(v=TT3$meanTransitTime, lty=2, col=2)#
+legend("topright", c("Parallel structure", "Feedback structure"), lty=1, col=c(4,2), bty="n")
+par(mfrow=c(3,1))#
+for(i in 1:3){#
+  plot(seq(0,100),SA2$poolAgeDensity[,i],type="l",  ylab="Probability density", xlab="Age", bty="n")#
+}#
+#
+par(mfrow=c(3,1))#
+for(i in 1:3){#
+  plot(seq(0,100),SA3$poolAgeDensity[,i],type="l",  ylab="Probability density", xlab="Age", bty="n")#
+}
+set.seed(032023)
+p.A<-rbeta(1000,23,7)
+p.B<-rbeta(1000,18,10)
+mean(p.A>p.B)
+glm.in<-read.table('BT_GLM_data_ind.txt',sep='\t',header=TRUE)
+glm.pl<-read.table('BT_GLM_data_plot.txt',sep='\t',header=TRUE)
+exp(-100000)
+exp(-2.044*log(1.7,10))
+exp(-2.044*log(1.7))
+-1.03*exp(-2.044*log(1.7))
+-1.03*exp(-2.044*log(1.7,10))
+-1.03*exp(-2.044*1.7)
+-1.03*exp(-2.044*log(47.1,10))
+log(-1.03*exp(-2.044*log(47.1,10)))
+exp(-1.03*exp(-2.044*log(47.1,10)))
+log(47.1,10)
+log(0.1862*exp(1.019*(log,47.1,10)))
+log(0.1862*exp(1.019*(log(47.1,10)))
+)
+0.1862*exp(1.019*(1.7)))
+0.1862*exp(1.019*(1.7))
+0.1862*exp(1.019*log(47.12,10)))
+0.1862*exp(1.019*log(47.12,10))
+0.1862*exp(1.019*log(47.12))
+0.1862*exp(1.019*log(47.12,10))
+0.1862*exp(1.019*log(6.28,10))
+-1.03*exp(-2.044*log(6.28,10))
+0.15*0.5317+0.7372
+exp(-1.03*exp(-2.044*log(47.1,10)))
+-1.03*exp(-2.044*log(47.1,10))
+I<-1:10
+Imin<-01
+library("doBy")#
+#library('mefa')#
+library("segmented")#
+library("nlme")#
+library("lme4")#
+library("reshape")#
+# library("plot3D")#
+library('rworldmap')#
+library('rworldxtra')#
+library('Evapotranspiration')#
+library('emmeans')#
+library('multcomp')#
+library('plyr')#
+library('agricolae')#
+library('multcompView')#
+#
+# library('rethinking')#
+# library("rstan")#
+# options(mc.cores = parallel::detectCores())#
+# rstan_options(auto_write = TRUE)#
+#
+## cast(data, col.group1+col.group2~row.group,FUN)#
+rm(list=ls())#
+'%out%'<-function(a,b){!a%in%b}#
+se<-function(x){sd(x,na.rm=T)/sqrt(sum(!is.na(x)))}#
+cv<-function(x){se(x)/mean(x,na.rm=T)}#
+n<-function(x){sum(!is.na(x))}#
+md<-function(x){c(m=mean(x,na.rm=T),sd=sd(x,na.rm=T))}#
+me<-function(x){c(m=mean(x,na.rm=T),se=se(x))}#
+men<-function(x){c(m=mean(x,na.rm=T),se=se(x),n=n(x))}#
+#
+rmse<-function(x){sqrt(mean(x^2))}#
+mse.model<-function(observation,prediction){#
+	sum((prediction-observation)^2)/sum(observation^2)}#
+gini<-function(x){ineq(x,type="Gini")}#
+maxn<-function(x,n){mean(x[order(-x)][1:n])}#
+max.prop<-function(x,proportion){#
+	n.prop<-ceiling(sum(!is.na(x))*proportion)#
+	x<-x[order(-x)]#
+	mean(x[1:n.prop],na.rm=TRUE)}#
+min.prop<-function(x,proportion){#
+	n.prop<-ceiling(sum(!is.na(x))*proportion)#
+	x<-x[order(x)]#
+	mean(x[1:n.prop],na.rm=TRUE)}#
+#
+rep.df<-function(df,rep.time){#
+	df[rep(1:nrow(df),rep.time),]}#
+pred.fit<-function(model,df,x,col){#
+	mn<-min(df[,x],na.rm=TRUE)#
+	mx<-max(df[,x],na.rm=TRUE)#
+	pred<-seq(mn,mx,length.out=300)#
+	response<-as.data.frame(pred)#
+	colnames(response)<-x#
+	m<-predict(model,response)#
+	lines(pred,m,col=col)#
+	}#
+#
+pred.err<-function(model,df,x,col){#
+	mn<-min(df[,x],na.rm=TRUE)#
+	mx<-max(df[,x],na.rm=TRUE)#
+	pred<-seq(mn,mx,length.out=300)#
+	response<-as.data.frame(pred)#
+	colnames(response)<-x#
+	m<-predict(model,response)#
+	err<-summary(model)$sig#
+	nse<-m-(err*2)#
+	pse<-m+(err*2)#
+	polygon(c(pred,rev(pred)),c(nse,rev(pse)),col=col,border=FALSE)#
+	}#
+mcolname<-function(df,nr.group,remove,add){c(colnames(df)[1:(nr.group)],paste(substr(colnames(df)[(nr.group+1):length(df)],1,nchar(colnames(df)[(nr.group+1):length(df)])-remove),add,sep=""))}#
+# coeff.list <- dlply(NPP, .(year,teat), function(DF) lm(NPP~sd, data=DF))#
+# coef<-ldply(coeff.list, extractfun)#
+extractfun <- function(m) {#
+       cf <- coef(m)#
+       tinfo <- summary(m)$coefficients[2, c(2, 4)]#
+       r2 <- summary(m)$r.squared#
+       data.frame(intercept = cf[1], slope = cf[2],#
+                  slope.se = tinfo[1], n = length(resid(m)),#
+                  pval = tinfo[2], Rsq = r2)}#
+#
+#between variables (#assuming unequal variance)#
+#
+aovBy <- function(formula, group, data, ...){#
+    formulaFunBy(formula, group, data, FUN=summary, class="aovBy", ...)#
+    }#
+#
+t.testBy1 <- function(formula, group, data, ...){#
+    formulaFunBy(formula, group, data, FUN=t.test, class="t.testBy1", ...)#
+    }#
+#between columns#
+t.testBy2 <- function(formula, group, data, ...){#
+    xyFunBy(formula, group, data, FUN=t.test, class="t.testBy1", ...)#
+  }#
+#
+#t-test with mean and standard error#
+#Equality of variance#
+two.s.f<-function(s1,s2,n1,n2){#
+	2*ifelse(s1>s2,(1-pf((s1^2*(n1))/(s2^2*(n1)),n1-1,n2-1)),(1-pf((s2^2*(n2))/(s1^2*(n1)),n2-1,n2-1)))#
+	}#
+#Independent (unpaired) one-sample test (equal or unequal sample size, and equal variance)#
+one.s.t<-function(x,a,s,n){#
+	(1-pt(abs((x - a)/s), n-1))*2#
+	}#
+#Independent (unpaired) two-sample test (equal or unequal sample size, and equal variance)#
+two.s.t<-function(x1,x2,s1,s2,n1,n2){#
+	(1-pt(abs((x1-x2)/(sqrt(((n1-1)*(s1*sqrt(n1))^2+(n2-1)*(s2*sqrt(n2))^2)/(n1+n2-2))*sqrt(1/n1+1/n2))), n1+n2-2))*2#
+	}#
+#Independent (unpaired) two-sample test (equal or unequal sample size, and unequal variance), Welch's t-test#
+Wel.df<-function(x1,x2,s1,s2,n1,n2){(s1^2+s2^2)^2/(s1^4/(n1-1)+s2^4/(n2-1))}#
+two.s.t.uv<-function(x1,x2,s1,s2,n1,n2){#
+	2*(1-pt(abs((x1-x2)/(sqrt(s1^2+s2^2))),Wel.df(x1,x2,s1,s2,n1,n2)))#
+	}#
+#Independent (unpaired) two-sample test (equal or unequal sample size, and combination of unequal and equal variances)	#
+two.tftest<-function(x1,x2,s1,s2,n1,n2){#
+	fnc<-function(x1,x2,s1,s2,n1,n2){#
+	ftest<-two.s.f(s1,s2,n1,n2)#
+	ifelse(ftest>0.05,two.s.t(x1,x2,s1,s2,n1,n2),two.s.t.uv(x1,x2,s1,s2,n1,n2))}#
+	mapply(fnc,x1,x2,s1,s2,n1,n2)}#
+#Power calculation #NEED TO BE FIXED#
+pwr.t<-function(x1,x2,s1,s2,n1,n2){#
+a <- x2-x1#
+s <- sqrt(s1*s1+s2*s2)#
+ftest<-two.s.f(s1,s2,n1,n2)#
+df<-ifelse(ftest>0.05,n1+n2-2,Wel.df(x1,x2,s1,s2,n1,n2))#
+error <- qt(0.975,df=df)*s#
+left <- a-error#
+right <- a+error#
+tleft <- left/s#
+tright <- right/s#
+1-(pt(tright,df=df)-pt(tleft,df=df))}#
+sd.mean<-function(sd){#
+	sqrt(mean(sd^2,na.rm=TRUE))}#
+sd.m<-function(m1,sd1,m2){#
+	sqrt((m2/m1)^2)*sd1}#
+sd.pooled<-function(sd1,n1,sd2,n2){#
+	sqrt(((n2-1)*sd2^2+((n1-1)*sd1^2))/(n2+n1-2))}#
+sd.mtom<-function(m1,sd1,m2,sd2){#
+	sqrt((sd1/m1)^2+(sd2/m2)^2)}#
+sd.mtom1<-function(m,sd){#
+	sqrt(sum((sd/m)^2))}	#
+sd.sum<-function(sd){#
+	sqrt(sum(sd^2))}	# x = SD or SE#
+sd.msubm<-function(sd1,sd2){#
+	sqrt(sd1^2+sd2^2)}#
+sd.mtob<-function(a,m,b,sd){#
+	abs((a*m^b*b*sd)/m)}#
+log.sd<-function(a,m,sd,lower){abs(a*(sd/(m*log(lower))))}#
+#
+effect.size<-function(m1,m2,sd1,sd2,n1,n2){#
+	(m2-m1)/sd.pooled(sd1,n1,sd2,n2)}#
+#
+#Stand Density Index#
+SDI<-function(N.ha,D.cm){#
+	(N.ha/2.4711)*(D.cm/25.4)^1.605}#
+qdr.m<-function(D){#
+	sqrt(mean(D^2,na.rm=TRUE))}#
+BA<-function(D){#
+	D^2/4*pi}#
+revD<-function(BA){#
+	sqrt((BA*4)/pi)}#
+#VPD kPa#
+vpd<-function(t,rh){#
+	exp(t*17.269/(t+237.3)*.61078)*(1-(rh/100))}#
+#
+vpdtxn<-function(Tx,Tn){((6.1078 * exp(17.269 * Tx / (237.3 + Tx)))-(6.1078 * exp(17.269 * Tn / (237.3 + Tn))))/2}	#mBar#
+#
+vpd1<-function(T,rh){#
+A<--1.88*10^4#
+B<--13.1#
+C<--1.5*10^-2#
+D<-8*10^-7#
+E<--1.69*10^-11#
+F<-6.456#
+exp(A/(T+273.15)+B+C*(T+273.15)+D*(T+273.15)^2+E*(T+273.15)^3+F*log(T+273.15))-exp(A/(T+273.15)+B+C*(T+273.15)+D*(T+273.15)^2+E*(T+273.15)^3+F*log(T+273.15))*rh/100}#
+#
+get.vpd <- function(temp,rh){#
+  ## calculate vapor pressure deficit#
+  vpd <- ((100 - rh) / 100) * 6.11 * exp((2.5e6 / 461) * (1 / 273 - 1 / (273 + temp)))#
+  return(vpd)#
+}#
+#write.table(NPP,"NPP.txt",sep="\t",quote=FALSE,row.names=FALSE)#
+#plot(getMap(resolution="high"),xlim=c(15,20),ylim=c(55,70))#
+# lwd 1 = 0.75 pt#
+# cex 1 = 12 pt
+sd.msubm(0.4,1.3)
+mean(4.1,1.2)
+mean(c(4.1,1.2))
+1.36/mean(c(4.1,1.2))
+x<-1:10
+y<-1
+corr(x,y)
+cor(x,y)
+y<-rep(1,10)
+cor(x,y)
+rnorm(10,5,0.1)
+y<-rnorm(10,5,0.1)
+cor(x,y)
+plot(x,y)
+summary(cor(x,y))
+summary(lm(y~x))
+quartz(w=2.7,h=2.8)
+update()
+plot()
+plot(1,1)
+source('/Users/hyli0001/Documents/Rwork/functions.R')#
+setwd('/Users/hyli0001/Documents/Korea/Biomass/Rwork')#
+bm<-read.table("tree_harv.txt",header=TRUE)#
+bmpd<-bm[bm$sp=='PD',]#
+colnames(bmpd)<-c('ext_no','sp','plot','no','age','d','h','Bst','Bbr','Bf','Bcr','wd','Vst','Vst.5')#
+bmpd$ba<-(bmpd$d/2)^2*pi#
+bmpd$bef1<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf)/bmpd$Bst#
+bmpd$bef2<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf+bmpd$Bcr)/bmpd$Bst#
+bmpd$bef3<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf+bmpd$Bcr)/bmpd$Vst
+si1<-read.table("site_info_1.txt",header=TRUE)#
+si2<-read.table("site_info_2.txt",header=TRUE)#
+#
+sipd<-si1[si1$ext_no%in%unique(bmpd$ext_no),]#
+sipd$sp<-'PD'#
+sipd$ba<-(sipd$dbh/200)^2*pi#
+#
+sim1<-summaryBy(ba+h~ext_no+plot_size,sipd,FUN=md)#
+sim2<-summaryBy(ba~ext_no+plot_size,sipd,FUN=n)#
+sim2$std<-sim2$ba.n/sim2$plot_size#
+#
+sim<-merge(merge(sim1,si2,by='ext_no'),sim2[,c('ext_no','std')],by='ext_no')#
+sim$rsd<-((sim$std/2.4711)*(sqrt(sim$ba.m/pi)*2*100/25.4)^1.605)/400#
+bms<-merge(bmpd,sim,by=c('ext_no'))#
+#
+par(mfrow=c(1,2))#
+plot(bef2~rsd,bms,ylim=c(1,2.35),bg=2,pch=21)#
+points(bef1~rsd,bms,ylim=c(1,2.35))#
+plot(bef2~age,bms,ylim=c(1,2.35),bg=2,pch=21)#
+points(bef1~age,bms,ylim=c(1,2.35))
+bmpd$bef3<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf+bmpd$Bcr)/bmpd$Vst
+si1<-read.table("site_info_1.txt",header=TRUE)
+si2<-read.table("site_info_2.txt",header=TRUE)
+sipd<-si1[si1$ext_no%in%unique(bmpd$ext_no),]
+sipd$sp<-'PD'
+source('/Users/hyli0001/Documents/Rwork/functions.R')#
+setwd('/Users/hyli0001/Documents/Korea/Biomass/Rwork')#
+bm<-read.table("tree_harv.txt",header=TRUE)#
+bmpd<-bm[bm$sp=='PD',]#
+colnames(bmpd)<-c('ext_no','sp','plot','no','age','d','h','Bst','Bbr','Bf','Bcr','wd','Vst','Vst.5')#
+bmpd$ba<-(bmpd$d/2)^2*pi#
+bmpd$bef1<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf)/bmpd$Bst#
+bmpd$bef2<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf+bmpd$Bcr)/bmpd$Bst#
+bmpd$bef3<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf+bmpd$Bcr)/bmpd$Vst#
+si1<-read.table("site_info_1.txt",header=TRUE)#
+si2<-read.table("site_info_2.txt",header=TRUE)#
+#
+sipd<-si1[si1$ext_no%in%unique(bmpd$ext_no),]#
+sipd$sp<-'PD'#
+sipd$ba<-(sipd$dbh/200)^2*pi#
+#
+sim1<-summaryBy(ba+h~ext_no+plot_size,sipd,FUN=md)#
+sim2<-summaryBy(ba~ext_no+plot_size,sipd,FUN=n)#
+sim2$std<-sim2$ba.n/sim2$plot_size#
+#
+sim<-merge(merge(sim1,si2,by='ext_no'),sim2[,c('ext_no','std')],by='ext_no')#
+sim$rsd<-((sim$std/2.4711)*(sqrt(sim$ba.m/pi)*2*100/25.4)^1.605)/400#
+bms<-merge(bmpd,sim,by=c('ext_no'))
+par(mfrow=c(1,2))#
+plot(bef2~rsd,bms,ylim=c(1,2.35),bg=2,pch=21)#
+points(bef1~rsd,bms,ylim=c(1,2.35))#
+plot(bef2~age,bms,ylim=c(1,2.35),bg=2,pch=21)#
+points(bef1~age,bms,ylim=c(1,2.35))
