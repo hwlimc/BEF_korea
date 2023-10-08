@@ -1,5 +1,5 @@
 source('/Users/hyli0001/Documents/Rwork/functions.R')
-setwd('/Users/hyli0001/Documents/Korea/Biomass/Rwork')
+setwd('/Users/hyli0001/Documents/GitHub/BEF_korea/BEF_korea/Rwork')
 bm<-read.table("tree_harv.txt",header=TRUE)
 bmpd<-bm[bm$sp=='PD',]
 colnames(bmpd)<-c('ext_no','sp','plot','no','age','d','h','Bst','Bbr','Bf','Bcr','wd','Vst','Vst.5')
@@ -7,7 +7,6 @@ bmpd$ba<-(bmpd$d/2)^2*pi
 bmpd$bef1<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf)/bmpd$Bst
 bmpd$bef2<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf+bmpd$Bcr)/bmpd$Bst
 bmpd$bef3<-(bmpd$Bst+bmpd$Bbr+bmpd$Bf+bmpd$Bcr)/bmpd$Vst
-
 
 si1<-read.table("site_info_1.txt",header=TRUE)
 si2<-read.table("site_info_2.txt",header=TRUE)
